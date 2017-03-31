@@ -1,2 +1,2 @@
-# planning_in_robotics
+# PDDL simulation
 Prácticas para integración de planificación PDDL con simulación robótica
