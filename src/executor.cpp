@@ -42,20 +42,20 @@ int main(int argc, char *argv[])
                 printf("PLAN COMPLETED!\n");
             }
             // Beavhiour for MOVEMENT
-            else if(!strncmp(accion,(char*)"move",4))
+            else if(!strncmp(accion,(char*)"MOVE",4))
             {
                 switch(accion[4])
                 {
-                    case 'n': // Move to north
+                    case 'N': // Move to north
                         printf("INCLUDE YOUR CODE TO MOVE NORTH\n");
                         break;
-                    case 's': // Move to south
+                    case 'S': // Move to south
                         printf("INCLUDE YOUR CODE TO MOVE SOUTH\n");
                         break;
-                    case 'e': // Move to east
+                    case 'E': // Move to east
                         printf("INCLUDE YOUR CODE TO MOVE EAST\n");
                         break;
-                    case 'w': // Move to west
+                    case 'W': // Move to west
                         printf("INCLUDE YOUR CODE TO MOVE WEST\n");
                         break;
                     default: 

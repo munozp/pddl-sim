@@ -1,22 +1,22 @@
 %CONFIGURACION PLANIFICADOR PDDL
 %PLANIFICADOR
-bin/optic-clp
+bin/sgplan
 %PARAMETRO DOMINIO Y RUTA DOMINIO PDDL
--T -E -N
+-o
 bin/domain.pddl
 %PARAMETRO PROBLEMA Y RUTA PROBLEMA PDDL
- 
+-f
 bin/problem.pddl
 %PARAMETRO SALIDA Y RUTA FICHERO
->
+-out
 bin/plan
 %INICIO DE LAS ACCIONES FICHERO SALIDA
-; Cost:
+; PlanningTechnique Modified-FF
 %
 %INFORMACION DE LAS ACCIONES Y
 %CONFIUGURACION ENLACE PDDL ACTION --> COMANDO EJECUTABLE
 ACTIONS# 4
-movenorth 2 2 5 move_to_north
-movesouth 2 2 5 move_to_south
-moveeast 2 2 5 move_to_east
-movewest 2 2 5 move_to_west
+MOVENORTH 2 2 5 move_to_north
+MOVESOUTH 2 2 5 move_to_south
+MOVEEAST 2 2 5 move_to_east
+MOVEWEST 2 2 5 move_to_west
