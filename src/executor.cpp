@@ -53,27 +53,23 @@ int main(int argc, char *argv[])
                 {
                     case 'N': // Move to north
                         printf("Moving north");
-                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 1.0, 0.0]' '[0.0, 0.0, 0.0]'");
-                        usleep(1000);
-                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'");
+                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 0.1, 0.0]' '[0.0, 0.0, 0.0]'");
+                        //system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'");
                         break;
                     case 'S': // Move to south
                         printf("Moving south");
-                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, -1.0, 0.0]' '[0.0, 0.0, 0.0]'");
-                        usleep(1000);
-                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'");
+                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, -0.1, 0.0]' '[0.0, 0.0, 0.0]'");
+                        //system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'");
                         break;
                     case 'E': // Move to east
                         printf("Moving east");
-                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[1.0, 0, 0.0]' '[0.0, 0.0, 0.0]'");
-                        usleep(1000);
-                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'");
+                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.1, 0, 0.0]' '[0.0, 0.0, 0.0]'");
+                        //system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'");
                         break;
                     case 'W': // Move to west
                         printf("Moving west");
-                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[-1.0, 0.0, -0.0]' '[0.0, 0.0, 0.0]'");
-                        usleep(1000);
-                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'");
+                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[-0.1, 0.0, -0.0]' '[0.0, 0.0, 0.0]'");
+                        //system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'");
                         break;
                     default: 
                         printf("Unknown movement action\n");
