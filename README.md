@@ -48,3 +48,11 @@ Línea de configuración : GIRAR 2 2 5 informacion-extra
 ```
 
 El archivo que se encuentra en `bin/pddlconfig` puede ser usado como base para utilizar en el desarrollo de la práctica.
+
+# Dependencias
+Paquetes ROS que deben estar instalados:
+
+* stdr_simulator
+* stdr_resources
+* stdr_gui
+* stdr_robot
