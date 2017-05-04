@@ -29,7 +29,7 @@ trap "end" 2 3
 if [ $# -gt 0 ]; then
     bin/pddl_executor $1
 else
-    bin/pddl_executor bin/pddlconfig
+    bin/pddl_executor config/pddlconfig
 fi
 
 read -p "Press any key to finish" -n1 -s

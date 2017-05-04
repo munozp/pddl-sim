@@ -3,13 +3,13 @@
 bin/optic-clp
 %PARAMETRO DOMINIO Y RUTA DOMINIO PDDL
 -T -E -N
-bin/domain.pddl
+config/domain.pddl
 %PARAMETRO PROBLEMA Y RUTA PROBLEMA PDDL
  
-bin/problem.pddl
+config/problem.pddl
 %PARAMETRO SALIDA Y RUTA FICHERO
 >
-bin/plan
+config/plan
 %INICIO DE LAS ACCIONES FICHERO SALIDA
 ; Cost:
 %
