@@ -7,6 +7,9 @@
 */
 #include <cstdlib>
 #include <cstdio>
+
+#include <unistd.h>
+
 #include "Planner.h"
 
 using namespace std;
@@ -21,6 +24,8 @@ int main(int argc, char *argv[])
         printf("Bad arguments. The PDDL configuration file shall be provided as only argument.\n");
         return -1;
     }
+
+
     //Create PDDL planner and generate plan
     printf("Using %s file for PDDL configuration.\n",argv[1]);
     Planner planificador(argv[1]);    
@@ -42,21 +47,29 @@ int main(int argc, char *argv[])
                 printf("PLAN COMPLETED!\n");
             }
             // Beavhiour for MOVEMENT
-            else if(!strncmp(accion,(char*)"move",4))
+            else if(!strncmp(accion,(char*)"MOVE",4))
             {
                 switch(accion[4])
                 {
-                    case 'n': // Move to north
-                        printf("INCLUDE YOUR CODE TO MOVE NORTH\n");
+                    case 'N': // Move to north
+                        printf("Moving north");
+                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 0.1, 0.0]' '[0.0, 0.0, 0.0]'");
+                        //system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'");
                         break;
-                    case 's': // Move to south
-                        printf("INCLUDE YOUR CODE TO MOVE SOUTH\n");
+                    case 'S': // Move to south
+                        printf("Moving south");
+                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, -0.1, 0.0]' '[0.0, 0.0, 0.0]'");
+                        //system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'");
                         break;
-                    case 'e': // Move to east
-                        printf("INCLUDE YOUR CODE TO MOVE EAST\n");
+                    case 'E': // Move to east
+                        printf("Moving east");
+                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.1, 0, 0.0]' '[0.0, 0.0, 0.0]'");
+                        //system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'");
                         break;
-                    case 'w': // Move to west
-                        printf("INCLUDE YOUR CODE TO MOVE WEST\n");
+                    case 'W': // Move to west
+                        printf("Moving west");
+                        system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[-0.1, 0.0, -0.0]' '[0.0, 0.0, 0.0]'");
+                        //system("rostopic pub -1 /robot0/cmd_vel geometry_msgs/Twist '[0.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'");
                         break;
                     default: 
                         printf("Unknown movement action\n");

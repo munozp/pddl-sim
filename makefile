@@ -4,8 +4,12 @@ CXXFLAGS=-I include
 LDDIR=-L lib
 LIBA=-lPDDL
 
-all: 
-	$(CC) $(CFLAGS) $(CXXFLAGS) $(LDDIR) $(LIBA) src/executor.cpp -o bin/pddl_executor
+all: executor.o
+	$(CC) executor.o lib/libPDDL.so -o bin/pddl_executor
+
+executor.o: src/executor.cpp
+	$(CC) $(CFLAGS) $(CXXFLAGS) src/executor.cpp -c
+
 
 clean: deltemp
 	rm bin/pddl_executor
