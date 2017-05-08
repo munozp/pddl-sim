@@ -2,13 +2,13 @@
 %PLANIFICADOR
 bin/sgplan
 %PARAMETRO DOMINIO Y RUTA DOMINIO PDDL
--T -E -N
+-o
 config/domain.pddl
 %PARAMETRO PROBLEMA Y RUTA PROBLEMA PDDL
- 
+-f
 config/problem.pddl
 %PARAMETRO SALIDA Y RUTA FICHERO
->
+-out
 config/plan
 %INICIO DE LAS ACCIONES FICHERO SALIDA
 ; PlanningTechnique Modified-FF
