@@ -4,10 +4,10 @@ Prácticas para integración de planificación PDDL con simulación robótica
 ## Ejecución del planificación
 1. En el terminal, cambiar el directorio de trabajo a la raíz del proyecto
 2. Si no estaba hecho, compilar el proyecto ejecutando ``make''
-3. Lanzar el simulador: ``roslaunch launch/simple.launch''
+3. Lanzar el simulador: ``roslaunch launch/rooms.launch''
 4. En otro terminal (o pestaña), lanzar el ejecutor desde la raíz del proyecto: ``./bin/launch_sim.sh''
 
-Existe un segundo archivo launch (teleop.launch) para la teleoperación del robot, útil para depuración.
+Existe un segundo archivo launch (`teleop.launch`) para la teleoperación del robot, útil para depuración.
 
 ## Descripción de la librería de manejo del planificador
 
@@ -56,3 +56,5 @@ Paquetes ROS que deben estar instalados:
 * stdr_resources
 * stdr_gui
 * stdr_robot
+
+Si tienes algún problema cargando el robot, intenta actualizar el sistema (`apt-get update && apt-get upgrade`).
